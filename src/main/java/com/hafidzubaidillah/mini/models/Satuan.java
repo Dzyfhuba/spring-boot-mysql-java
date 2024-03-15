@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,8 +25,6 @@ public class Satuan {
     private LocalDateTime created_at;
     @UpdateTimestamp
     private LocalDateTime updated_at;
-    // private String created_at;
-    // private String updated_at;
     
     public String getDescription() {
         return description;
