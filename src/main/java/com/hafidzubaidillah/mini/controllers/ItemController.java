@@ -36,12 +36,25 @@ public class ItemController {
   // return itemRepository.findAll();
   // }
 
-  @GetMapping("")
+  @GetMapping()
   public Page<Item> index(
       @RequestParam(defaultValue = "0") int page,
       @RequestParam(defaultValue = "10") int size) {
     Pageable pageable = PageRequest.of(page, size);
     return itemRepository.findAll(pageable);
+  }
+
+  @GetMapping("/{id}")
+  public ResponseEntity<Item> show(
+    @PathVariable int id
+  ) {
+    Optional<Item> item = itemRepository.findById(id);
+
+    if (item.isEmpty()) {
+      return ResponseEntity.notFound().build();
+    }
+
+    return ResponseEntity.ok().body(item.get());
   }
 
   @PostMapping()
