@@ -1,31 +1,62 @@
 package com.hafidzubaidillah.mini.models;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Item {
+public class Item implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private String barcode;
     private String item_code;
     private String item_name;
-    private Integer satuan_id;
+    
+    @Column(insertable = false, updatable = false)
+    private String status_name;
+
+    public String getStatus_name() {
+        return this.satuan.getDescription();
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "satuan_id", nullable = true)
+    @JsonIgnore
+    private Satuan satuan;
+
     @Column(updatable = false)
     @CreationTimestamp
     private LocalDateTime created_at;
     @UpdateTimestamp
     private LocalDateTime updated_at;
-    
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Satuan getSatuan() {
+        return satuan;
+    }
+
+    public void setSatuan(Satuan satuan) {
+        this.satuan = satuan;
+    }
+
     public String getBarcode() {
         return barcode;
     }
@@ -48,14 +79,6 @@ public class Item {
 
     public void setItem_name(String item_name) {
         this.item_name = item_name;
-    }
-
-    public Integer getSatuan_id() {
-        return satuan_id;
-    }
-
-    public void setSatuan_id(Integer satuan_id) {
-        this.satuan_id = satuan_id;
     }
 
     public LocalDateTime getCreated_at() {

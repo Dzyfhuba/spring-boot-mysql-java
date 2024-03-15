@@ -43,11 +43,13 @@ public class ItemController {
     if (satuanOptional.isEmpty()) {
         return ResponseEntity.badRequest().body("Satuan with id " + satuan_id + " not found");
     }
+
+    Satuan satuan = satuanOptional.get();
     
     Item item = new Item();
     item.setItem_code(item_code);
     item.setItem_name(item_name);
-    item.setSatuan_id(satuan_id);
+    item.setSatuan(satuan);
     item.setBarcode(UUID.randomUUID().toString());
     itemRepository.save(item);
     return ResponseEntity.status(201).body("Stored");
@@ -70,10 +72,12 @@ public class ItemController {
         return ResponseEntity.badRequest().body("Satuan with id " + satuan_id + " not found");
     }
 
+    Satuan satuan = satuanOptional.get();
+
     Item item = itemOptional.get();
     item.setItem_code(item_code);
     item.setItem_name(item_name);
-    item.setSatuan_id(satuan_id);
+    item.setSatuan(satuan);
     itemRepository.save(item);
     return ResponseEntity.status(201).body("Updated");
   }
