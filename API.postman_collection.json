@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "a875c384-f6a9-477c-a90a-62e2a602fb3e",
+		"name": "TES_BE_HSM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19273875"
+	},
+	"item": [
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/items?page=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"items"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/items",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Mar 2024 22:45:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"totalPages\": 3,\n    \"totalElements\": 21,\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"sorted\": false,\n            \"empty\": true,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"size\": 10,\n    \"content\": [\n        {\n            \"id\": 202,\n            \"barcode\": \"137116b5-c157-4f57-abd2-250fa445b080\",\n            \"item_code\": \"ZXC\",\n            \"item_name\": \"zxc\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:06.264406\",\n            \"updated_at\": \"2024-03-16T04:33:30.709519\"\n        },\n        {\n            \"id\": 203,\n            \"barcode\": \"d31cc970-1e9e-42b2-9a9b-aabea6d8e1b1\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:12.167374\",\n            \"updated_at\": \"2024-03-16T04:30:12.167411\"\n        },\n        {\n            \"id\": 204,\n            \"barcode\": \"345b659b-5db6-4ff0-9729-b6b6338b9c6c\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:38.888597\",\n            \"updated_at\": \"2024-03-16T04:30:38.888626\"\n        },\n        {\n            \"id\": 205,\n            \"barcode\": \"c90e20e1-570e-413f-a8e5-64497920d9a6\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:39.646549\",\n            \"updated_at\": \"2024-03-16T04:30:39.646575\"\n        },\n        {\n            \"id\": 206,\n            \"barcode\": \"aa587c66-c7d5-4ee3-a088-a8a649cd8aee\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:40.31289\",\n            \"updated_at\": \"2024-03-16T04:30:40.312932\"\n        },\n        {\n            \"id\": 207,\n            \"barcode\": \"d9a0a7ed-6990-4f5c-943e-1eb43fd1f4b4\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:40.943973\",\n            \"updated_at\": \"2024-03-16T04:30:40.944013\"\n        },\n        {\n            \"id\": 208,\n            \"barcode\": \"554756fe-cfd1-4152-8ffd-842aec6a4384\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:41.523934\",\n            \"updated_at\": \"2024-03-16T04:30:41.523976\"\n        },\n        {\n            \"id\": 209,\n            \"barcode\": \"a1788558-9f6d-42cb-83cc-71d3b3a46bcf\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:42.121596\",\n            \"updated_at\": \"2024-03-16T04:30:42.121632\"\n        },\n        {\n            \"id\": 210,\n            \"barcode\": \"d5781dca-06db-4d50-9766-c81af74275b7\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:42.736596\",\n            \"updated_at\": \"2024-03-16T04:30:42.736622\"\n        },\n        {\n            \"id\": 211,\n            \"barcode\": \"afd5bb83-c854-4056-8eee-0350c477e4fe\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:43.2771\",\n            \"updated_at\": \"2024-03-16T04:30:43.277126\"\n        }\n    ],\n    \"number\": 0,\n    \"sort\": {\n        \"sorted\": false,\n        \"empty\": true,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 10,\n    \"first\": true,\n    \"last\": false,\n    \"empty\": false\n}"
+						},
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/items?page=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 15 Mar 2024 22:46:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"totalPages\": 3,\n    \"totalElements\": 21,\n    \"pageable\": {\n        \"pageNumber\": 2,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"sorted\": false,\n            \"empty\": true,\n            \"unsorted\": true\n        },\n        \"offset\": 20,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"size\": 10,\n    \"content\": [\n        {\n            \"id\": 222,\n            \"barcode\": \"307ab083-cf27-43b6-b382-67e0b1e38abc\",\n            \"item_code\": \"ASD\",\n            \"item_name\": \"AASSDD\",\n            \"status_name\": \"milimeter\",\n            \"created_at\": \"2024-03-16T04:30:49.324497\",\n            \"updated_at\": \"2024-03-16T04:30:49.324541\"\n        }\n    ],\n    \"number\": 2,\n    \"sort\": {\n        \"sorted\": false,\n        \"empty\": true,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"first\": false,\n    \"last\": true,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/items/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "202"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_code",
+									"value": "ASD",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "AASSDD",
+									"type": "text"
+								},
+								{
+									"key": "satuan_id",
+									"value": "54",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/items",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_code",
+									"value": "ZXC",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "zxc",
+									"type": "text"
+								},
+								{
+									"key": "satuan_id",
+									"value": "54",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/items/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "202"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/items/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "223"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "satuan",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/satuan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"satuan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "milimeter",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/satuan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"satuan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "byte",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/satuan/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"satuan",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/satuan/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"satuan",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
